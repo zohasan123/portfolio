@@ -4,21 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Zoya Hasan</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Contact</h1>
+    <h1>Contact me</h1>
 
-    <form action="mailto:zoya.hasan2004@gmail.com" method="POST" enctype="text/plain">
-        <label for="email">Your Email:</label>
-        <input id="email" name="email" type="email" value="zohasan@ucsd.edu" required>
-        <br><br>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="random@email.com">
+      
         <label for="subject">Subject:</label>
-        <input id="subject" name="subject" value="Wassup" required>
-        <br><br>
-        <label for="body">Message:</label>
-        <textarea id="body" name="body" rows="5" cols="30">Test</textarea>
-        <br><br>
-        <button>Submit</button>
-    </form>
+        <input type="text" id="subject" name="subject" value="IS THIS WORKING">
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message">Heyy</textarea>
+      
+        <button type="submit">Send</button>
+      </form>
+      
 </body>
+
+<style>
+    form {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1em;
+    }
+
+    label {
+        grid-column: 1 / 2;
+    }
+
+    input, textarea {
+        grid-column: 2 / -1;
+        width: 100%;
+    }
+
+    button {
+        grid-column: 1 / -1;
+        padding: 0.5em;
+        justify-self: center;
+    }
+</style>
+
 </html>
